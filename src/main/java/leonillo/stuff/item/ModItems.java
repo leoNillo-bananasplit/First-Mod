@@ -1,6 +1,7 @@
 package leonillo.stuff.item;
 
 import leonillo.stuff.FirstMod;
+import leonillo.stuff.item.custom.ColacaoItem;
 import leonillo.stuff.item.custom.SuperBenItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -19,6 +20,10 @@ public class ModItems {
             new FabricItemSettings()
         )
     );
+    public static final Item COLACAO = registerItem("colacao", new ColacaoItem(
+            new FabricItemSettings()
+        )
+    );
 
     private static Item registerItem( String name, Item item ) {
         return Registry.register( Registries.ITEM, new Identifier( FirstMod.MOD_ID, name ), item );
@@ -27,6 +32,7 @@ public class ModItems {
     public static void addItemsToItemGroup() {
         addToItemGroup( ItemGroups.FOOD_AND_DRINK, BEN );
         addToItemGroup( ItemGroups.FUNCTIONAL, SUPER_BEN);
+        addToItemGroup( ItemGroups.FOOD_AND_DRINK, COLACAO);
     }
 
     private static void addToItemGroup( ItemGroup group, Item item ) {
