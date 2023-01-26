@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 169,
+  "experience": 0.7,
+  "group": "firstmod:super_ben",
+  "ingredient": {
+    "item": "firstmod:ben"
+  },
+  "result": "firstmod:super_ben"
+}
