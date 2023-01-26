@@ -26,6 +26,7 @@ public class ModItems {
 
     public static void addItemsToItemGroup() {
         addToItemGroup( ItemGroups.FOOD_AND_DRINK, BEN );
+        addToItemGroup( ItemGroups.FUNCTIONAL, SUPER_BEN);
     }
 
     private static void addToItemGroup( ItemGroup group, Item item ) {
