@@ -30,7 +30,7 @@ public class ColacaoItem extends Item {
         super.finishUsing(stack, world, user);
         if (user instanceof ServerPlayerEntity) {
             ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity)user;
-            Criteria.CONSUME_ITEM.trigger(serverPlayerEntity, stack);
+            stack.decrement(1);
             serverPlayerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
         }
         if (!world.isClient) {

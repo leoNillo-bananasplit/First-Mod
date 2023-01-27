@@ -10,6 +10,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+//import static leonillo.stuff.block.ModBlocks.BEN_ORE;
+
 public class ModItems {
     public static final Item BEN = registerItem("ben", new Item(
             new FabricItemSettings().food( new FoodComponent.Builder().hunger( 20 ).saturationModifier( 20.0f ).build()
@@ -33,6 +35,7 @@ public class ModItems {
         addToItemGroup( ItemGroups.FOOD_AND_DRINK, BEN );
         addToItemGroup( ItemGroups.FUNCTIONAL, SUPER_BEN);
         addToItemGroup( ItemGroups.FOOD_AND_DRINK, COLACAO);
+        //addToItemGroup( ItemGroups.NATURAL, Item.fromBlock(BEN_ORE));
     }
 
     private static void addToItemGroup( ItemGroup group, Item item ) {
@@ -43,6 +46,7 @@ public class ModItems {
         FirstMod.LOGGER.info( "YEEEES (registrando items pa tu mod)" );
 
         addItemsToItemGroup();
+
     }
 
 }
