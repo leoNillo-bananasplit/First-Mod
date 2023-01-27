@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "minecraft:grass"
+      "item": "firstmod:ben"
     },
     {
       "item": "minecraft:milk_bucket"
@@ -23,6 +23,6 @@
   ],
   "result": {
     "count": 4,
-    "item": "firstmod:colacao"
+    "item": "firstmod:colacao_ben"
   }
 }

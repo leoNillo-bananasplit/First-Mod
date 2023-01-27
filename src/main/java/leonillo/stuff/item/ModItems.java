@@ -1,7 +1,8 @@
 package leonillo.stuff.item;
 
 import leonillo.stuff.FirstMod;
-import leonillo.stuff.item.custom.ColacaoItem;
+import leonillo.stuff.item.custom.ColacaoBenItem;
+import leonillo.stuff.item.custom.ColacaoErickItem;
 import leonillo.stuff.item.custom.SuperBenItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -10,7 +11,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-//import static leonillo.stuff.block.ModBlocks.BEN_ORE;
 
 public class ModItems {
     public static final Item BEN = registerItem("ben", new Item(
@@ -22,7 +22,11 @@ public class ModItems {
             new FabricItemSettings()
         )
     );
-    public static final Item COLACAO = registerItem("colacao", new ColacaoItem(
+    public static final Item COLACAO_ERICK = registerItem("colacao_erick", new ColacaoErickItem(
+            new FabricItemSettings()
+        )
+    );
+    public static final Item COLACAO_BEN = registerItem("colacao_ben", new ColacaoBenItem(
             new FabricItemSettings()
         )
     );
@@ -34,8 +38,8 @@ public class ModItems {
     public static void addItemsToItemGroup() {
         addToItemGroup( ItemGroups.FOOD_AND_DRINK, BEN );
         addToItemGroup( ItemGroups.FUNCTIONAL, SUPER_BEN);
-        addToItemGroup( ItemGroups.FOOD_AND_DRINK, COLACAO);
-        //addToItemGroup( ItemGroups.NATURAL, Item.fromBlock(BEN_ORE));
+        addToItemGroup( ItemGroups.FOOD_AND_DRINK, COLACAO_ERICK);
+        addToItemGroup( ItemGroups.FOOD_AND_DRINK, COLACAO_BEN);
     }
 
     private static void addToItemGroup( ItemGroup group, Item item ) {

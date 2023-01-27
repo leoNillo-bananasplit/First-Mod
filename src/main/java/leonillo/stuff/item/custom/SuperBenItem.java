@@ -17,8 +17,7 @@ public class SuperBenItem extends Item {
     public TypedActionResult<ItemStack> use( World world, PlayerEntity user, Hand hand ) {
         if(!world.isClient() && hand == Hand.MAIN_HAND) {
             user.getItemCooldownManager().set(this, 69);
-            user.giveItemStack(new ItemStack(Items.DIAMOND, 5));
-
+            user.giveItemStack(new ItemStack(Items.DIAMOND, 3));
         }
 
         return super.use( world, user, hand );

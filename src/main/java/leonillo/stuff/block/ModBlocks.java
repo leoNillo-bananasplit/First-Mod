@@ -18,7 +18,7 @@ public class ModBlocks {
 
     public static final Block BEN_ORE = registerBlock("ben_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).strength(10.0f),
-                UniformIntProvider.create(1, 10000)));
+                UniformIntProvider.create(1, 1000)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

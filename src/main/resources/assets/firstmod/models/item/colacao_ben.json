@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "firstmod:item/colacao"
+    "layer0": "firstmod:item/colacao_ben"
   }
 }

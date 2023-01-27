@@ -1,6 +1,5 @@
 package leonillo.stuff.item.custom;
 
-import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -18,10 +17,10 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
-public class ColacaoItem extends Item {
+public class ColacaoBenItem extends Item {
     private static final int MAX_USE_TIME = 40;
 
-    public ColacaoItem(Item.Settings settings) {
+    public ColacaoBenItem(Settings settings) {
         super(settings);
     }
 
@@ -34,8 +33,9 @@ public class ColacaoItem extends Item {
             serverPlayerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
         }
         if (!world.isClient) {
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 420, 1));
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 420, 5));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 420, 1));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 420, 3));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 420,9));
         }
         if (stack.isEmpty()) {
             return new ItemStack(Items.GLASS_BOTTLE);
