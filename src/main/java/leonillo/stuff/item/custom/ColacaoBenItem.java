@@ -34,7 +34,7 @@ public class ColacaoBenItem extends Item {
             serverPlayerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
         }
         if (!world.isClient) {
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 420, 1));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 60, 1));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 420, 3));
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 420,9));
         }
